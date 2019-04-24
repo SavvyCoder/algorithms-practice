@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+</head>
+  
+<div>
+  
+</div>
+  
+  
+  
+  
+  
+  
+  
+
+  
+</html>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+  
+  function createProductCodeForm(parent) {
+  var form = $("<form/>");
+
+  form.append($("<label>").text('Product Code:'));
+  form.append($("<input>").attr('name', 'productCode').attr('type', 'text').attr('onfocus', "$('label[name]').show()").attr('onblur', "$('label[name]').hide()"));
+  form.append($("<label>").attr('name', 'hint').text('The product code can be found on the label.').attr('style', 'display:none'));
+
+  form.append('<br>');
+
+  form.append($("<input>").attr('type', 'submit'));
+
+  parent.append(form);
+}
+  
+  
+$(function(){
+  createProductCodeForm($('div'));
+})  
+</script>
